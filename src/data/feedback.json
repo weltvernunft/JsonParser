@@ -1,0 +1,41 @@
+{
+    "form_name": "Свяжитесь с нами!",
+    "form_description": "Ваше мнение очень важно для нас.",
+    "form_fields": [
+        {
+            "id": "name",
+            "type": "text",
+            "label": "Имя",
+            "required": true,
+            "placeholder": "Введите ваше имя",
+            "maxlength": 50
+        },
+        {
+            "id": "email",
+            "type": "text",
+            "label": "Электронная почта",
+            "required": true,
+            "placeholder": "Введите ваш адрес электронной почты",
+            "maxlength": 100,
+            "minlength": 5,
+            "pattern": "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+        },
+        {
+            "id": "text",
+            "type": "textarea",
+            "label": "Сообщение",
+            "required": true,
+            "placeholder": "Введите ваше сообщение"
+        }
+    ],
+    "form_buttons": [
+        {
+            "name": "Отмена",
+            "type": "button"
+        },
+        {
+            "name": "Отправить",
+            "type": "submit"
+        }
+    ]
+}

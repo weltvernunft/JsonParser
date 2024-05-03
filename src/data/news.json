@@ -1,0 +1,64 @@
+{
+  "form_name": "Создайте новость",
+  "form_description": "Поделитесь своими эмоциями",
+  "form_fields": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Заголовок",
+      "required": true,
+      "placeholder": "Введите заголовок статьи",
+      "maxlength": 150
+    },
+    {
+      "id": "content",
+      "type": "textarea",
+      "label": "Содержание",
+      "required": true,
+      "placeholder": "Введите содержание статьи",
+      "maxlength": 1000
+    },
+    {
+      "id": "tags",
+      "type": "text",
+      "label": "Теги",
+      "required": false,
+      "placeholder": "Вводите новые теги, разделяя их знаком |",
+      "maxlength": 255
+    },
+    {
+      "id": "date",
+      "type": "text",
+      "label": "Дата публикации",
+      "required": true,
+      "placeholder": "XX/XX/XXXX",
+      "mask": "XX/XX/XXXX",
+      "pattern": "^(0[1-9]|1[0-2])/(0[1-9]|[12][0-9]|3[01])/\\d{4}$"
+    },
+    {
+      "id": "images",
+      "type": "file",
+      "label": "Галерея",
+      "required": false,
+      "formats": "image/png, image/jpeg, image/jpg",
+      "max_size": 5242880,
+      "max_count": 10
+    },
+    {
+      "id": "show_main_page",
+      "type": "checkbox",
+      "label": "Выводить новость на главной странице",
+      "required": false
+    }
+  ],
+  "form_buttons": [
+    {
+      "name": "Отмена",
+      "type": "button"
+    },
+    {
+      "name": "Опубликовать",
+      "type": "submit"
+    }
+  ]
+}

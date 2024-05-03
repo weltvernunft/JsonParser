@@ -21,8 +21,9 @@ To use JSONParser React in your project, follow these steps:
 2. Run react-server
 ```npm run dev```
 3. Run local express server
-```cd server\
-   node index.js
+```
+cd server\
+node index.js
 ```
 Now you can receive data, that was sent by hitting the submit button if all the fields were correctly filled in. A data collection will display in the node-server terminal.
 

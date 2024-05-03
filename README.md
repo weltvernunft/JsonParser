@@ -16,18 +16,22 @@ JSONParser React is a React component designed to facilitate the parsing of JSON
 - Node version: 12.2.0
 
 ## Installation
-
 To use JSONParser React in your project, follow these steps:
-
 1. Install packages
-   `npm i`
+```npm i```
 2. Run react-server
-   `npm run dev`
+```npm run dev```
 3. Run local express server
+````
 
-```
 cd server
 node index.js
-```
 
+```
 Now you can receive data, that was sent by hitting the submit button if all the fields were correctly filled in. A data collection will display in the node-server terminal.
+
+<<<<<<< HEAD
+Now you can receive data, that was sent by hitting the submit button if all the fields were correctly filled in. A data collection will display in the node-server terminal.
+=======
+>>>>>>> 567c00502d45adb9d7a199a482769ff176529197
+```

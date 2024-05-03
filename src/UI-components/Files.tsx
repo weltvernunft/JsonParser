@@ -104,18 +104,12 @@ const Files: React.FC<Props> = ({ onUpload }) => {
     setImagePreviewUrl(imageUrl);
     // Call the onUpload function with the file
     onUpload(file);
-    // console.log("A file is uploaded");
   };
 
   const handleDragOver = (event: React.DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     setActiveDrag(true);
   };
-
-  // const handleDragEnd = (event) => {
-  //   event.preventDefault();
-  //   setActiveDrag(false);
-  // };
 
   const handleDeleteFile = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>

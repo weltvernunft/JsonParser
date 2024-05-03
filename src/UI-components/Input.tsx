@@ -58,7 +58,7 @@ const Input: React.FC<InputProps> = ({
       const isValid = regex.test(value);
 
       if (!isValid) {
-        inputError = `Please enter a valid password.\n It should be 8 to 50 characters long and contain at least one letter, one number, and one special character (!@#$%^&*()).
+        inputError = `Password should contain at least one letter, one number, and one special character (!@#$%^&*()).
         `;
       }
     }
@@ -82,8 +82,8 @@ const Input: React.FC<InputProps> = ({
         pattern={pattern}
         value={inputValue}
         onChange={handleChange}
-        className={`shadow p-4 w-full rounded-md ${
-          error && submitAction ? "bg-red-girl" : ""
+        className={` p-4 w-full rounded-md ${
+          error && submitAction ? "bg-red-girl shadow shadow-red" : "shadow-sm"
         }`}
         autoComplete="off"
       />

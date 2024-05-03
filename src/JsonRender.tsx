@@ -46,7 +46,6 @@ const JsonRender: React.FC<{ jsonData: JsonData }> = ({ jsonData }) => {
   const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
-    console.log(filledRequired);
   }, [filledRequired]);
 
   const fillRequiredState = (id: string, value: boolean) => {

@@ -3,6 +3,7 @@ import fileIcon from "../assets/icons/file.svg";
 
 interface Props {
   onUpload: (jsonData: JsonData | null) => void;
+  jsonData: JsonData;
 }
 
 interface JsonData {
@@ -31,7 +32,7 @@ interface FormButton {
   type: string;
 }
 
-const Files: React.FC<Props> = ({ onUpload }) => {
+const Files: React.FC<Props> = ({ onUpload, jsonData }) => {
   const [activeDrag, setActiveDrag] = useState(false);
   const [fileError, setFileError] = useState<string | null>(null);
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
@@ -131,6 +132,10 @@ const Files: React.FC<Props> = ({ onUpload }) => {
       document.removeEventListener("dragleave", dragLeaveHandler);
     };
   }, []);
+
+  useEffect(() => {
+    if (!jsonData) setFileDetails(null);
+  }, [jsonData]);
 
   return (
     <div

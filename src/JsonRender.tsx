@@ -45,19 +45,20 @@ const JsonRender: React.FC<{ jsonData: JsonData }> = ({ jsonData }) => {
   );
   const [disabled, setDisabled] = useState(true);
 
-  useEffect(() => {
-  }, [filledRequired]);
-
   const fillRequiredState = (id: string, value: boolean) => {
     setFilledRequired((prevState) => ({
       ...prevState,
       [id]: value,
     }));
-
-    setDisabled(Object.values(filledRequired).some((item) => item === false));
-    console.log("Disabled state: ", disabled);
-    return disabled;
   };
+
+  useEffect(() => {
+    console.log("filledRequired array: ", filledRequired);
+    const allFilled = Object.values(filledRequired).every(
+      (item) => item === true
+    );
+    setDisabled(!allFilled);
+  }, [filledRequired]);
 
   const handleInputChange = (
     id: string,
